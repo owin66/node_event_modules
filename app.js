@@ -1,17 +1,8 @@
-
 const Logger = require('./log')
+const logger = new Logger();
 
-const logger = new Logger()
-/*
-emitter.on('some_event', (text) => {
-    console.log(text)
-})
-
-emitter.emit('some_event', 'Event test text');*/
-logger.on('some_text', (args) => {
+logger.on('event1', (args) => {
     const {id, text} = args;
-    console.log(id, text);
-});
-
-logger.log('User logged')
-
+    console.log(id, text)
+})
+logger.log('user logged')
